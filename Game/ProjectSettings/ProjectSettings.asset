@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 26
-  productGUID: 4f734716fd0e9da46b9d9402de09404f
+  productGUID: d78b18189bdfc9b4698299815dc54a0b
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: NotForgive
+  productName: Game
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -629,14 +629,14 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: NotForgive
+  metroPackageName: Game
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: NotForgive
+  metroApplicationDescription: Game
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
@@ -704,10 +704,10 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: 0fe33cb5-2eca-4515-81c3-ee7f28d2ddb0
+  cloudProjectId: 985a70ce-fc3e-4c5d-89dc-33b4be233cba
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: NotForgive 2024-02-17_02-24-03
+  projectName: Game
   organizationId: selimalpkirisci
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0

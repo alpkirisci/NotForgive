@@ -1,4 +1,0 @@
-repository "NotForgive@SelimAlpkirisci@cloud"
-  path "/"
-    br "/main"
-    co "/main"
