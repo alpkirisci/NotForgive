@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Building
+  - Enemy
+  - Minotaur
   layers:
   - Default
   - TransparentFX
@@ -11,9 +14,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Building
+  - Player
+  - Enemy
   - 
   - 
   - 
@@ -40,4 +43,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Top
+    uniqueID: 1140161421
+    locked: 0
+  - name: Player
+    uniqueID: 2144782725
+    locked: 0
+  - name: Enemy
+    uniqueID: 1906506963
     locked: 0

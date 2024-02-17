@@ -64,8 +64,10 @@ public class Character : MonoBehaviour
         target.Health -= Damage;
     }
 
+
+
     //
-    private void Awake()
+    public virtual void Awake()
     {
         myBody = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
@@ -74,14 +76,15 @@ public class Character : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
+    public virtual void Start()
     {
         
     }
 
     // Update is called once per frame
-    void Update()
+    public virtual void Update()
     {
         
     }
+
 }

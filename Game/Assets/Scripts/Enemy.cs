@@ -8,16 +8,21 @@ public class Enemy : Character
     [SerializeField]
     private float rotationSpeed = 5;
 
-    // Start is called before the first frame update
-    void Start()
+    public override void Awake()
     {
-        
+        base.Awake();
+    }
+
+    // Start is called before the first frame update
+    public override void Start()
+    {
+        base.Start();
     }
 
     // Update is called once per frame
-    void Update()
+    public override void Update()
     {
-        transform.Rotate(0,0,rotationSpeed * Time.deltaTime);
+        base.Update();
   
     }
 }
