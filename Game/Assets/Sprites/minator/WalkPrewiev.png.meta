@@ -126,10 +126,10 @@ TextureImporter:
       name: WalkPrewiev_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 31
-        width: 125
-        height: 82
+        x: 12
+        y: 33
+        width: 120
+        height: 78
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,8 +137,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6c787c7065fff7438fb8273d13f1642
-      internalID: 220564745
+      spriteID: 80f5efcc0b0c9a94990184e3249f392f
+      internalID: 149596719
       vertices: []
       indices: 
       edges: []
@@ -147,10 +147,10 @@ TextureImporter:
       name: WalkPrewiev_1
       rect:
         serializedVersion: 2
-        x: 154
-        y: 31
-        width: 124
-        height: 82
+        x: 156
+        y: 33
+        width: 120
+        height: 78
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,8 +158,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13bd1d3937b955e4192b346a89feef55
-      internalID: -271917469
+      spriteID: e1a4fd5c327d56c4b83c2fa9a51addcb
+      internalID: -455137224
       vertices: []
       indices: 
       edges: []
@@ -168,10 +168,10 @@ TextureImporter:
       name: WalkPrewiev_2
       rect:
         serializedVersion: 2
-        x: 300
-        y: 31
-        width: 123
-        height: 82
+        x: 301
+        y: 33
+        width: 120
+        height: 78
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,8 +179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 938749de927ddf94aadcf51983af5bff
-      internalID: -1864157754
+      spriteID: c814082ee19fbc541a1bab9017356bc3
+      internalID: 866652046
       vertices: []
       indices: 
       edges: []
@@ -189,10 +189,10 @@ TextureImporter:
       name: WalkPrewiev_3
       rect:
         serializedVersion: 2
-        x: 443
-        y: 31
-        width: 125
-        height: 82
+        x: 445
+        y: 33
+        width: 120
+        height: 78
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,8 +200,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b8e05bb99fd9d94bac6cb5d2d5bd0dc
-      internalID: -861358369
+      spriteID: 5de53731a015ce244bd527138703b272
+      internalID: -948710313
       vertices: []
       indices: 
       edges: []
@@ -210,10 +210,10 @@ TextureImporter:
       name: WalkPrewiev_4
       rect:
         serializedVersion: 2
-        x: 588
-        y: 31
-        width: 124
-        height: 82
+        x: 590
+        y: 33
+        width: 120
+        height: 78
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,8 +221,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f334a1da13b71643a5dce4123e7847a
-      internalID: 1297087737
+      spriteID: e4eef367471c39c4385b79865a94b0e5
+      internalID: -1332477344
       vertices: []
       indices: 
       edges: []
@@ -231,10 +231,10 @@ TextureImporter:
       name: WalkPrewiev_5
       rect:
         serializedVersion: 2
-        x: 732
-        y: 31
-        width: 124
-        height: 82
+        x: 734
+        y: 33
+        width: 120
+        height: 78
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,8 +242,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 504ec2e73dc9d494a96d9bcf6faed3d7
-      internalID: 189048646
+      spriteID: 49190ec1ae178ca45a55848271277734
+      internalID: 183574784
       vertices: []
       indices: 
       edges: []
@@ -252,10 +252,10 @@ TextureImporter:
       name: WalkPrewiev_6
       rect:
         serializedVersion: 2
-        x: 877
-        y: 31
-        width: 125
-        height: 82
+        x: 879
+        y: 33
+        width: 120
+        height: 78
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -263,8 +263,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6072499a0d0a4884784e4c8330ec746d
-      internalID: 650731278
+      spriteID: be48b1d26ab6b334aa42f82c1afce2e6
+      internalID: -1077303886
       vertices: []
       indices: 
       edges: []
@@ -273,10 +273,10 @@ TextureImporter:
       name: WalkPrewiev_7
       rect:
         serializedVersion: 2
-        x: 1020
-        y: 31
-        width: 124
-        height: 82
+        x: 1022
+        y: 33
+        width: 120
+        height: 78
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -284,8 +284,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f9c1c61873af22449b6c50a4c71449f6
-      internalID: 646602485
+      spriteID: f7966f7bb6ea3074fa019940f2dd0566
+      internalID: 299945092
       vertices: []
       indices: 
       edges: []
@@ -294,10 +294,10 @@ TextureImporter:
       name: WalkPrewiev_8
       rect:
         serializedVersion: 2
-        x: 1164
-        y: 31
-        width: 124
-        height: 82
+        x: 1166
+        y: 33
+        width: 120
+        height: 78
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -305,8 +305,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a246cdacd2a0474ba29f60fecc3d688
-      internalID: -1683792881
+      spriteID: 1b880f3c132f47f4abab39f7ffd16432
+      internalID: -1248705327
       vertices: []
       indices: 
       edges: []
@@ -315,10 +315,10 @@ TextureImporter:
       name: WalkPrewiev_9
       rect:
         serializedVersion: 2
-        x: 1307
-        y: 31
-        width: 125
-        height: 82
+        x: 1309
+        y: 33
+        width: 120
+        height: 78
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -326,8 +326,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d5a886e683d88d44093658eb35de854a
-      internalID: -873506134
+      spriteID: 8e6b3a275b03ee642b9fd2605c597f58
+      internalID: 2045690154
       vertices: []
       indices: 
       edges: []
@@ -336,10 +336,10 @@ TextureImporter:
       name: WalkPrewiev_10
       rect:
         serializedVersion: 2
-        x: 1450
-        y: 31
-        width: 125
-        height: 82
+        x: 1453
+        y: 33
+        width: 120
+        height: 78
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -347,8 +347,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4eb7a1a7a22096347aa059d4626f2de5
-      internalID: -939190869
+      spriteID: a299d14b03881b9469f2c544db76d55a
+      internalID: 1785446897
       vertices: []
       indices: 
       edges: []
@@ -357,10 +357,10 @@ TextureImporter:
       name: WalkPrewiev_11
       rect:
         serializedVersion: 2
-        x: 1594
-        y: 31
-        width: 125
-        height: 82
+        x: 1596
+        y: 33
+        width: 120
+        height: 78
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -368,8 +368,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78958228aa53c12498b35118fe98fc82
-      internalID: 147317323
+      spriteID: 948cc5240cc307e438db2ba3244b2eab
+      internalID: 1593846152
       vertices: []
       indices: 
       edges: []
@@ -378,10 +378,10 @@ TextureImporter:
       name: WalkPrewiev_12
       rect:
         serializedVersion: 2
-        x: 1737
-        y: 31
-        width: 125
-        height: 82
+        x: 1740
+        y: 33
+        width: 120
+        height: 78
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -389,8 +389,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a36c3963509701b46865edbf30bdc609
-      internalID: -1675539798
+      spriteID: 6becd47e099d5d94db432d019b2fdcdd
+      internalID: 2147373398
       vertices: []
       indices: 
       edges: []
@@ -399,10 +399,10 @@ TextureImporter:
       name: WalkPrewiev_13
       rect:
         serializedVersion: 2
-        x: 1882
-        y: 31
-        width: 124
-        height: 82
+        x: 1884
+        y: 33
+        width: 120
+        height: 78
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -410,8 +410,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 77c26c240d41a03479395767e390146c
-      internalID: -1317850666
+      spriteID: 09c63701bdcfb6748a00059ec0024043
+      internalID: -1330329993
       vertices: []
       indices: 
       edges: []
@@ -420,10 +420,10 @@ TextureImporter:
       name: WalkPrewiev_14
       rect:
         serializedVersion: 2
-        x: 2026
-        y: 31
-        width: 125
-        height: 82
+        x: 2028
+        y: 33
+        width: 120
+        height: 78
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -431,8 +431,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97cd3cf5707a4b4419cb4209fb4c3b53
-      internalID: 1596563600
+      spriteID: b2e67aab95a53494687172be34d1b47c
+      internalID: -1534288421
       vertices: []
       indices: 
       edges: []
@@ -441,10 +441,10 @@ TextureImporter:
       name: WalkPrewiev_15
       rect:
         serializedVersion: 2
-        x: 2169
-        y: 31
-        width: 123
-        height: 82
+        x: 2171
+        y: 33
+        width: 120
+        height: 78
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -452,8 +452,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9160722e843ca2340b6ba6d77dc0755f
-      internalID: 1887605010
+      spriteID: e940d79ee3655d84c942815da1918951
+      internalID: 1327983470
       vertices: []
       indices: 
       edges: []
@@ -462,10 +462,10 @@ TextureImporter:
       name: WalkPrewiev_16
       rect:
         serializedVersion: 2
-        x: 2312
-        y: 31
-        width: 124
-        height: 82
+        x: 2314
+        y: 33
+        width: 120
+        height: 78
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -473,8 +473,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9dd4e96cc60e63d4291602d6c8705df8
-      internalID: -1554354153
+      spriteID: 9d89aa07c345c3f45bff48b7efd3af06
+      internalID: -310996754
       vertices: []
       indices: 
       edges: []
@@ -483,10 +483,10 @@ TextureImporter:
       name: WalkPrewiev_17
       rect:
         serializedVersion: 2
-        x: 2456
-        y: 31
-        width: 123
-        height: 82
+        x: 2458
+        y: 33
+        width: 120
+        height: 78
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -494,8 +494,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0644fba187fdf54a8c36edd24161c89
-      internalID: 893386773
+      spriteID: 604b3fcfc6c47c042bef31c292aeb297
+      internalID: 1497412929
       vertices: []
       indices: 
       edges: []
@@ -504,10 +504,10 @@ TextureImporter:
       name: WalkPrewiev_18
       rect:
         serializedVersion: 2
-        x: 2600
-        y: 31
-        width: 123
-        height: 82
+        x: 2601
+        y: 33
+        width: 120
+        height: 78
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -515,8 +515,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07f25bc8c8b97dc4f934801525299bc5
-      internalID: -1119202139
+      spriteID: 9ccf9186b71700d43a2ad0c0fd67c19d
+      internalID: -986443890
       vertices: []
       indices: 
       edges: []
@@ -525,10 +525,10 @@ TextureImporter:
       name: WalkPrewiev_19
       rect:
         serializedVersion: 2
-        x: 2744
-        y: 31
-        width: 124
-        height: 82
+        x: 2746
+        y: 33
+        width: 120
+        height: 78
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -536,8 +536,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb61732a2f499114d9aa4574363059da
-      internalID: -1084807076
+      spriteID: 6fa1ec5134bf8d0489227bee6265ca05
+      internalID: 863827883
       vertices: []
       indices: 
       edges: []
@@ -546,10 +546,10 @@ TextureImporter:
       name: WalkPrewiev_20
       rect:
         serializedVersion: 2
-        x: 2888
-        y: 31
-        width: 123
-        height: 82
+        x: 2890
+        y: 33
+        width: 120
+        height: 78
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -557,8 +557,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2843d55ffeb7f73448c35a25e3ad491b
-      internalID: -31013681
+      spriteID: e3215dbbc18845e48999baaf4f2dfc61
+      internalID: -643656554
       vertices: []
       indices: 
       edges: []
@@ -567,10 +567,10 @@ TextureImporter:
       name: WalkPrewiev_21
       rect:
         serializedVersion: 2
-        x: 3033
-        y: 31
-        width: 123
-        height: 82
+        x: 3035
+        y: 33
+        width: 120
+        height: 78
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -578,8 +578,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68044fe680cd7a4449a738f15c586845
-      internalID: 694631191
+      spriteID: 4e7d7f2704cf2f6408f29744308dd6dd
+      internalID: 805063799
       vertices: []
       indices: 
       edges: []
@@ -588,10 +588,10 @@ TextureImporter:
       name: WalkPrewiev_22
       rect:
         serializedVersion: 2
-        x: 3178
-        y: 31
-        width: 124
-        height: 82
+        x: 3180
+        y: 33
+        width: 120
+        height: 78
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -599,8 +599,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6724eb2f185e27b4582a3c8bb90693b8
-      internalID: -2116484763
+      spriteID: b69621b759e9f3e488c1dfd3d8aacda1
+      internalID: -628546561
       vertices: []
       indices: 
       edges: []
@@ -609,10 +609,10 @@ TextureImporter:
       name: WalkPrewiev_23
       rect:
         serializedVersion: 2
-        x: 3322
-        y: 31
-        width: 125
-        height: 82
+        x: 3324
+        y: 33
+        width: 120
+        height: 78
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -620,8 +620,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2919ded6c1d36094a81b680d2c01e375
-      internalID: 69447718
+      spriteID: bc99047f958874e42a4fb961c97a1b77
+      internalID: -1413505136
       vertices: []
       indices: 
       edges: []
@@ -637,30 +637,30 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      WalkPrewiev_0: 220564745
-      WalkPrewiev_1: -271917469
-      WalkPrewiev_10: -939190869
-      WalkPrewiev_11: 147317323
-      WalkPrewiev_12: -1675539798
-      WalkPrewiev_13: -1317850666
-      WalkPrewiev_14: 1596563600
-      WalkPrewiev_15: 1887605010
-      WalkPrewiev_16: -1554354153
-      WalkPrewiev_17: 893386773
-      WalkPrewiev_18: -1119202139
-      WalkPrewiev_19: -1084807076
-      WalkPrewiev_2: -1864157754
-      WalkPrewiev_20: -31013681
-      WalkPrewiev_21: 694631191
-      WalkPrewiev_22: -2116484763
-      WalkPrewiev_23: 69447718
-      WalkPrewiev_3: -861358369
-      WalkPrewiev_4: 1297087737
-      WalkPrewiev_5: 189048646
-      WalkPrewiev_6: 650731278
-      WalkPrewiev_7: 646602485
-      WalkPrewiev_8: -1683792881
-      WalkPrewiev_9: -873506134
+      WalkPrewiev_0: 149596719
+      WalkPrewiev_1: -455137224
+      WalkPrewiev_10: 1785446897
+      WalkPrewiev_11: 1593846152
+      WalkPrewiev_12: 2147373398
+      WalkPrewiev_13: -1330329993
+      WalkPrewiev_14: -1534288421
+      WalkPrewiev_15: 1327983470
+      WalkPrewiev_16: -310996754
+      WalkPrewiev_17: 1497412929
+      WalkPrewiev_18: -986443890
+      WalkPrewiev_19: 863827883
+      WalkPrewiev_2: 866652046
+      WalkPrewiev_20: -643656554
+      WalkPrewiev_21: 805063799
+      WalkPrewiev_22: -628546561
+      WalkPrewiev_23: -1413505136
+      WalkPrewiev_3: -948710313
+      WalkPrewiev_4: -1332477344
+      WalkPrewiev_5: 183574784
+      WalkPrewiev_6: -1077303886
+      WalkPrewiev_7: 299945092
+      WalkPrewiev_8: -1248705327
+      WalkPrewiev_9: 2045690154
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

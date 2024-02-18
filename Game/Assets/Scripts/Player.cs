@@ -7,171 +7,59 @@ using UnityEngine;
 
 public class Player : Character
 {
+    public SpriteRenderer spriteRenderer;
+
+    public int rotationSpeed = 360;
     public float speed = 5;
-    public Animator playerAnimator;
-    public float rotationSpeed = 90f;
-    public float tolerance = 1f;
+
+
+    public override void Awake()
+    {
+        base.Awake();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+
+    }
+
     // Start is called before the first frame update
     public override void Start()
     {
-        playerAnimator = GetComponent<Animator>();
+        base.Start();
 
     }
 
     // Update is called once per frame
     public override void Update()
     {
+        base.Update();
+
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
        
-          Vector2 pos = transform.position;
+        Vector2 pos = transform.position;
         
         pos.x += h * speed * Time.deltaTime;
         pos.y += v * speed * Time.deltaTime;
 
         transform.position = pos;
 
-        if(v != 0 || h!=0)
+        Vector2 movementDirection = new Vector2(h,v);
+
+        if (movementDirection != Vector2.zero)
         {
-            playerAnimator.SetBool("walk",true);
+            animator.SetBool("walk", true);
+            Quaternion toRotation = Quaternion.LookRotation(Vector3.forward, movementDirection);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
         }
-        else { playerAnimator.SetBool("walk", false); }
-        
-
-        float rotationAmount=0;
-
-        Quaternion rot =transform.rotation;
-        Quaternion leftLimit = Quaternion.Euler(0, 0, 90);
-        Quaternion rightLimit = Quaternion.Euler(0, 0, -90);
-        Quaternion upLimit = Quaternion.Euler(0, 0, 0);
-        Quaternion bottomLimit = Quaternion.Euler(0, 0, -180);
-        Quaternion upLeftLimit = Quaternion.Euler(0, 0, 45);
-        Quaternion upRightLimit = Quaternion.Euler(0, 0, -45);
-        Quaternion bottomLeftLimit = Quaternion.Euler(0, 0, 135);
-        Quaternion bottomRightLimit = Quaternion.Euler(0, 0, -135);
-
-        
-
-        if (Input.GetKey(KeyCode.A) && !QuaternionCompare(rot, leftLimit))
-        {
-          
-            if (Input.GetKey(KeyCode.W) && !QuaternionCompare(rot, upLeftLimit))
-            {
-                rotationAmount -= rotationSpeed * Time.deltaTime;
-                transform.Rotate(0, 0, rotationAmount);
-            }
-            else {
-                rotationAmount += rotationSpeed * Time.deltaTime;
-                transform.Rotate(0, 0, rotationAmount);
-            }
-            
-
-        }
-
-       
-        
-
-        else if(Input.GetKey(KeyCode.D)&& !QuaternionCompare(rot, rightLimit))
-        {
-            if (Input.GetKey(KeyCode.W) && !QuaternionCompare(rot, upRightLimit))
-            {
-                rotationAmount += rotationSpeed * Time.deltaTime;
-                transform.Rotate(0, 0, rotationAmount);
-            }
-            else if( !Input.GetKey(KeyCode.S))
-            {
-                rotationAmount -= rotationSpeed * Time.deltaTime;
-                transform.Rotate(0, 0, rotationAmount);
-            }
-
-            
-        }
-
-
-
-        else if (Input.GetKey(KeyCode.W) && !QuaternionCompare(rot, upLimit))
-        {
-
-            if (Input.GetKey(KeyCode.A) && !QuaternionCompare(rot, upRightLimit))
-            {
-                rotationAmount -= rotationSpeed * Time.deltaTime;
-                transform.Rotate(0, 0, rotationAmount);
-            }
-            else if( Input.GetKey(KeyCode.D) && !QuaternionCompare(rot, upLeftLimit))
-            {
-                rotationAmount += rotationSpeed * Time.deltaTime;
-                transform.Rotate(0, 0, rotationAmount);
-            }
-            else
-            {
-                rotationAmount -= rotationSpeed * Time.deltaTime;
-                transform.Rotate(0, 0, rotationAmount);
-            }
-
-        }
-
-        else if (Input.GetKey(KeyCode.S) && !QuaternionCompare(rot, bottomLimit))
-        {
-            
-
-             if (Input.GetKey(KeyCode.D) && !QuaternionCompare(rot, bottomRightLimit))
-            {
-                rotationAmount += rotationSpeed * Time.deltaTime;
-                transform.Rotate(0, 0, rotationAmount);
-            }
-            else if (Input.GetKey(KeyCode.A) && !QuaternionCompare(rot, bottomLeftLimit))
-            {
-                rotationAmount -= rotationSpeed * Time.deltaTime;
-                transform.Rotate(0, 0, rotationAmount);
-            }
-            else
-            {
-                rotationAmount -= rotationSpeed * Time.deltaTime;
-                transform.Rotate(0, 0, rotationAmount);
-            }
-        }
-
-
-
-        /*
-        
-         if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.W) && !QuaternionCompare(rot, upLeftLimit))
-        {
-            rotationAmount -= rotationSpeed * Time.deltaTime;
-            transform.Rotate(0, 0, rotationAmount);
-        }
-
-              if (Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.W) && !QuaternionCompare(rot, upRightLimit))
-        {
-            rotationAmount -= rotationSpeed * Time.deltaTime;
-            transform.Rotate(0, 0, rotationAmount);
-        }
-
-        else if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.S) && !QuaternionCompare(rot, bottomLeftLimit))
-        {
-            rotationAmount -= rotationSpeed * Time.deltaTime;
-            transform.Rotate(0, 0, rotationAmount);
-        }
-
-        else if (Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.S) && !QuaternionCompare(rot, bottomRightLimit))
-        {
-            rotationAmount -= rotationSpeed * Time.deltaTime;
-            transform.Rotate(0, 0, rotationAmount);
-        }
-        */
-
-
-       
-
+        else { animator.SetBool("walk", false); }
     }
-    bool QuaternionCompare(Quaternion a, Quaternion b)
-    {
-        // Calculate the difference between quaternions
-        float angleDifference = Quaternion.Angle(a, b);
+    //bool QuaternionCompare(Quaternion a, Quaternion b)
+    //{
+    //    // Calculate the difference between quaternions
+    //    float angleDifference = Quaternion.Angle(a, b);
 
-        // Check if the difference is within the tolerance level
-        return angleDifference < tolerance;
-    }
+    //    // Check if the difference is within the tolerance level
+    //    return angleDifference < tolerance;
+    //}
 
 
 }

@@ -10,9 +10,9 @@ public class Character : MonoBehaviour
     public int damage;
     public string Name;
 
-    public Rigidbody2D rigidBody;
+    public Rigidbody2D rb;
     public Animator animator;
-    public SpriteRenderer spriteRenderer;
+
     public string WALK_ANIMATON = "Walk";
     public string ATTACK_ANIMATION = "Attack";
 
@@ -32,11 +32,11 @@ public class Character : MonoBehaviour
     }
 
     //
-    private void Awake()
+    public virtual void Awake()
     {
-        rigidBody = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        //spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
 
