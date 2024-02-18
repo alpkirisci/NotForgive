@@ -59,6 +59,7 @@ MonoBehaviour:
   ATTACK_ANIMATION: Attack
   target: {fileID: 0}
   rotationSpeed: 180
+  minAttackDistance: 6.59
 --- !u!50 &6338129996107865870
 Rigidbody2D:
   serializedVersion: 4
