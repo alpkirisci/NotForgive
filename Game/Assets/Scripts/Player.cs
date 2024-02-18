@@ -5,7 +5,7 @@ using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : Character
 {
     public float speed = 5;
     public Animator playerAnimator;
@@ -172,4 +172,6 @@ public class Player : MonoBehaviour
         // Check if the difference is within the tolerance level
         return angleDifference < tolerance;
     }
+
+
 }
