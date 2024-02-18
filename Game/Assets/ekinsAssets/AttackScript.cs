@@ -9,6 +9,7 @@ public class AttackScript : MonoBehaviour
     public Transform attackPoint;
     public float attackRange = 0.5f;
 
+
     public LayerMask enemyLayers;
     // Update is called once per frame
     void Update()

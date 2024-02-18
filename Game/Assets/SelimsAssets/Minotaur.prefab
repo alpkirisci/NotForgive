@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 6746482060590592369}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.05, y: -0.57, z: 0}
+  m_LocalPosition: {x: -0.05, y: 0.13, z: 0}
   m_LocalScale: {x: 0.99999994, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -73,17 +73,48 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -7739618459034725314, guid: 3d90828de40c9af4f8f3253eaff689a1, type: 3}
+  m_Sprite: {fileID: 1423493305, guid: 7adb10502318c6546a9ef1adfa7b0f30, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.2, y: 0.78}
+  m_Size: {x: 1.2549019, y: 0.82}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &8292909989049207349
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6794385008866840293}
+  m_Layer: 0
+  m_Name: MinotaurAttack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6794385008866840293
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8292909989049207349}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.03, y: 0.18, z: -0.009829309}
+  m_LocalScale: {x: 0.125, y: 0.125, z: 0.125}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5713662610573099350}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8363916640715726805
 GameObject:
   m_ObjectHideFlags: 0
@@ -119,6 +150,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 601226763935323298}
+  - {fileID: 6794385008866840293}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3154318745268798213
@@ -141,8 +173,17 @@ MonoBehaviour:
   animator: {fileID: 0}
   WALK_ANIMATON: Walk
   ATTACK_ANIMATION: Attack
+  healthBar: {fileID: 0}
   target: {fileID: 0}
   rotationSpeed: 180
+  minAttackDistance: 5
+  attackPoint: {fileID: 6794385008866840293}
+  player: {fileID: 0}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  attackHitBox: 3.34
+  notAttacking: 1
 --- !u!50 &6862653299397131744
 Rigidbody2D:
   serializedVersion: 4

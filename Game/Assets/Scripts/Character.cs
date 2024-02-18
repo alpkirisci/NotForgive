@@ -16,6 +16,8 @@ public class Character : MonoBehaviour
     public string WALK_ANIMATON = "Walk";
     public string ATTACK_ANIMATION = "Attack";
 
+    public HealtBarScript healthBar;
+
 
     public Character() { }
     public Character(int health, int maxHealth, int damage, string name)
@@ -23,7 +25,8 @@ public class Character : MonoBehaviour
         this.health = health;
         this.maxHealth = maxHealth;
         this.damage = damage;
-        Name = name;
+        this.Name = name;
+        healthBar = new HealtBarScript(maxHealth);
     }
 
     public virtual void attack(Character target)
@@ -34,15 +37,17 @@ public class Character : MonoBehaviour
     //
     public virtual void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
+        this.rb = GetComponent<Rigidbody2D>();
+        this.animator = GetComponent<Animator>();
         //spriteRenderer = GetComponent<SpriteRenderer>();
+        this.health = maxHealth;
     }
 
 
     // Start is called before the first frame update
     public virtual void Start()
     {
+
         
     }
 

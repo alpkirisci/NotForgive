@@ -52,14 +52,6 @@ public class Player : Character
         }
         else { animator.SetBool("walk", false); }
     }
-    //bool QuaternionCompare(Quaternion a, Quaternion b)
-    //{
-    //    // Calculate the difference between quaternions
-    //    float angleDifference = Quaternion.Angle(a, b);
-
-    //    // Check if the difference is within the tolerance level
-    //    return angleDifference < tolerance;
-    //}
 
 
 }

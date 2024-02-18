@@ -14,29 +14,36 @@ public class Enemy : Character
     [SerializeField] private int rotationSpeed = 360;
     [SerializeField] private float minAttackDistance = 5f;
 
+    public Transform attackPoint;
+    public Player player;
+    public LayerMask playerLayer;
+    public float attackHitBox;
 
     public override void Awake()
     {
         base.Awake();
-
+        this.agent = GetComponent<NavMeshAgent>();
+        this.agent.updateUpAxis = false;
+        this.agent.updateRotation = false;
     }
 
     // Start is called before the first frame update
     public override void Start()
     {
         base.Start();
-        agent = GetComponent<NavMeshAgent>();
-        agent.updateUpAxis = false;
-        agent.updateRotation = false;
+
 
     }
 
 
 
 
+    public bool notAttacking = true;
     // Update is called once per frame
     public override void Update()
     {
+        base.Update();
+
         agent.SetDestination(target.position);
         FaceTarget();
 
@@ -44,12 +51,40 @@ public class Enemy : Character
         Vector2 agentXY = new(transform.position.x, transform.position.y);
 
         
-        if (minAttackDistance > Vector2.Distance(targetXY, agentXY))
+        if (minAttackDistance > Vector2.Distance(targetXY, agentXY) && notAttacking)
         {
+            notAttacking = false;
             animator.SetTrigger("Attack");
+            StartCoroutine(attackOnce());
+
         }
 
+    }
 
+    IEnumerator attackOnce()
+    {
+        yield return new WaitForSeconds(1.2f);
+        Attack();
+        yield return new WaitForSeconds(2.5f);
+        notAttacking = true;
+    }
+
+
+    public void Attack()
+    {
+        Collider2D[] hitten = Physics2D.OverlapCircleAll(attackPoint.position, attackHitBox, playerLayer);
+        foreach (Collider2D collider in hitten)
+        {
+            Debug.Log(collider.gameObject.name);
+        }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        if (attackPoint == null)
+            return;
+
+        Gizmos.DrawWireSphere(attackPoint.position, attackHitBox);
     }
 
     void FaceTarget() // and walk animation sorry for putting it here
