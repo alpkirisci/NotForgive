@@ -12,14 +12,14 @@ public class Player : Character
     public float rotationSpeed = 90f;
     public float tolerance = 1f;
     // Start is called before the first frame update
-    void Start()
+    public override void Start()
     {
         playerAnimator = GetComponent<Animator>();
 
     }
 
     // Update is called once per frame
-    void Update()
+    public override void Update()
     {
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
