@@ -10,12 +10,14 @@ public class Player : Character
     public SpriteRenderer spriteRenderer;
 
     public int rotationSpeed = 360;
-    public float speed = 5;
 
 
     public override void Awake()
     {
         base.Awake();
+        health = 100;
+        damage = 15;
+        maxHealth = health;
         spriteRenderer = GetComponent<SpriteRenderer>();
 
     }
@@ -51,6 +53,8 @@ public class Player : Character
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
         }
         else { animator.SetBool("walk", false); }
+
+        
     }
 
 

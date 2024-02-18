@@ -22,9 +22,13 @@ public class Enemy : Character
     public override void Awake()
     {
         base.Awake();
+
+
         this.agent = GetComponent<NavMeshAgent>();
         this.agent.updateUpAxis = false;
         this.agent.updateRotation = false;
+
+
     }
 
     // Start is called before the first frame update
@@ -75,7 +79,8 @@ public class Enemy : Character
         Collider2D[] hitten = Physics2D.OverlapCircleAll(attackPoint.position, attackHitBox, playerLayer);
         foreach (Collider2D collider in hitten)
         {
-            Debug.Log(collider.gameObject.name);
+            collider.GetComponent<Player>().health -= damage;
+            Debug.Log(collider.GetComponent<Player>().health);
         }
     }
 

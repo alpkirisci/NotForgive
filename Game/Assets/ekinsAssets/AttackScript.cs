@@ -9,6 +9,7 @@ public class AttackScript : MonoBehaviour
     public Transform attackPoint;
     public float attackRange = 0.5f;
 
+    public Player p1;
 
     public LayerMask enemyLayers;
     // Update is called once per frame
@@ -31,7 +32,7 @@ public class AttackScript : MonoBehaviour
         //
         foreach(Collider2D enemy in hitEnemies) 
         {
-            
+            enemy.GetComponent<Enemy>().health -= p1.damage;
         }
     
     }

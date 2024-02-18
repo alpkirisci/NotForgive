@@ -9,6 +9,8 @@ public class Character : MonoBehaviour
     public int maxHealth;
     public int damage;
     public string Name;
+    public float speed;
+    public bool dead = false;
 
     public Rigidbody2D rb;
     public Animator animator;
@@ -27,11 +29,6 @@ public class Character : MonoBehaviour
         this.damage = damage;
         this.Name = name;
         healthBar = new HealtBarScript(maxHealth);
-    }
-
-    public virtual void attack(Character target)
-    {
-        target.health -= damage;
     }
 
     //
@@ -54,6 +51,12 @@ public class Character : MonoBehaviour
     // Update is called once per frame
     public virtual void Update()
     {
+        if (health <= 0)
+        {
+            dead = true;
+        }
+        else
+            healthBar.setHealth(health);
         
     }
 }

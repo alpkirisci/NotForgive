@@ -1,8 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Playables;
+using UnityEngine.Windows.Speech;
 
 public class VineScript : MonoBehaviour
 {
@@ -12,6 +14,19 @@ public class VineScript : MonoBehaviour
     public int presCount;
     public bool pooker;
     public bool eggs;
+
+    public int damageinc = 20;
+    public float speedinc = 1.35f;
+    public int healthinc = 15;
+    public Player p1;
+
+
+    private float timer = 0f;
+    private bool isTimerRunning = false;
+    private bool eggTimer=true;
+
+
+
     // Start is called before the first frame update
     //1 for red
     //2 for white
@@ -29,10 +44,12 @@ public class VineScript : MonoBehaviour
         pooker = false;
         playerAnimator = GetComponent<Animator>();
         eggs=false;
+        p1 = GetComponent<Player>();
     }
 
-// Update is called once per frame
-void Update()
+   
+    // Update is called once per frame
+    void Update()
     {
         if (pooker == false)
         {
@@ -148,7 +165,7 @@ void Update()
             result = 0;
 
 
-        if (presCount == 5)
+        if (presCount > 5)
         {
             presCount = 0;
             pooker = true;
@@ -159,18 +176,129 @@ void Update()
         if (pooker) {
             
             playerAnimator.SetBool("POOK", true);
-           
             
         }
         
 
-        if (Input.GetKeyDown(KeyCode.I))
+        if (Input.GetKey(KeyCode.I))
         {
             pooker = false;
-            eggs = true;
+    
+            playerAnimator.SetTrigger("eggDrink");
             playerAnimator.SetBool("POOK", false);
-            if (eggs) { playerAnimator.SetBool("Eggs", false);eggs = false; }
+            playerAnimator.SetBool("walk", false);
+
+
+            p1.damage = 15;
+            p1.health = 150;
+            p1.speed = 12;
+        }
+
+
+        if(Input.GetKeyDown(KeyCode.O) && pooker==false)
+        {
+            Drink(result);
+            StartTimer();
+
+           
         }
         
+        
+      
+
+
+        if (isTimerRunning)
+        {
+            timer += Time.deltaTime;
+
+            if (timer >= 4f)
+            {
+                // Timer has reached 10 seconds
+
+                StopTimer();
+                p1.damage = 15;
+                p1.health = 150;
+                p1.speed = 12;
+            }
+        }
+
+
+        if (eggTimer)
+        {
+            timer += Time.deltaTime;
+
+            if (timer >= 6f)
+            {
+                // Timer has reached 10 seconds
+
+                EggStartTimer();
+
+            }
+        }
+
+
     }
+
+
+
+
+
+    private void Drink(int choice)
+    {
+            if(choice==1) {
+            p1.damage += damageinc;
+        }
+            else if(choice==2) {
+           
+            p1.speed *= speedinc;
+                }
+            else if(choice==3) {
+            p1.health += healthinc;
+
+        }
+            else if(choice==4) {
+            p1.damage += damageinc;
+            p1.speed *= speedinc;
+        }  
+            else if(choice==5) {
+            p1.damage += damageinc;
+            p1.health += healthinc;
+        }  
+            else if(choice ==6) { p1.health += healthinc;
+            p1.speed *= speedinc;
+        } 
+            else if (choice == 7) {
+        p1.health += healthinc;
+            p1.speed *= speedinc;
+            p1.damage += damageinc;
+        }
+
+        
+    }
+
+    void StartTimer()
+    {
+        timer = 0f;
+        isTimerRunning = true;
+    }
+
+    void StopTimer()
+    {
+        isTimerRunning = false;
+      
+    }
+
+
+    void EggStartTimer()
+    {
+        timer = 0f;
+        isTimerRunning = true;
+    }
+
+    void EggStopTimer()
+    {
+        isTimerRunning = false;
+
+    }
+
 }
