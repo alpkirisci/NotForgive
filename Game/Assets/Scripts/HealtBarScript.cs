@@ -10,7 +10,7 @@ public class HealtBarScript : MonoBehaviour
     public Gradient gradient;
     public Image fill;
 
-    public HealtBarScript(int maxHealth)
+    public void CreateHealtBar(int maxHealth)
     {
         this.maxHealth = maxHealth;
         slider.maxValue = maxHealth;

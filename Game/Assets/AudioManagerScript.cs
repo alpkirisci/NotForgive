@@ -5,11 +5,10 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     [Header("---------Source-----------------")]
-    [Header("---------------Clip-----------")]
-    [SerializeField] public AudioSource musicSource;
-    [SerializeField] public AudioSource SFXsource;
+    public AudioSource musicSource;
+    public AudioSource SFXsource;
 
-    [Header("---------------Clip-----------")]
+    [Header("---------Clip-----------------")]
     public AudioClip goblinTheme;
     public AudioClip goblinBossTheme;
     public AudioClip minotaurTheme;
@@ -23,17 +22,15 @@ public class AudioManager : MonoBehaviour
     public AudioClip swallow;
     public AudioClip hurt;
     public AudioClip puke;
-    
     public AudioClip punch;
 
-    
+
     public void Start()
     {
 
         musicSource.clip = chillax;
-; 
         musicSource.Play();
-        
+
     }
 
     public void PlaySFX(AudioClip clip)
@@ -49,7 +46,7 @@ public class AudioManager : MonoBehaviour
 
     public void Update()
     {
-      
+
 
 
         if (!musicSource.isPlaying)

@@ -11,13 +11,19 @@ public class Enemy : Character
 
     NavMeshAgent agent;
 
-    [SerializeField] private int rotationSpeed = 360;
-    [SerializeField] private float minAttackDistance = 5f;
+    protected int rotationSpeed;
+    protected float minAttackDistance;
+    protected float attackDelay;
+    protected float attackWait;
 
     public Transform attackPoint;
     public Player player;
     public LayerMask playerLayer;
     public float attackHitBox;
+
+
+    
+
 
     public override void Awake()
     {
@@ -35,8 +41,6 @@ public class Enemy : Character
     public override void Start()
     {
         base.Start();
-
-
     }
 
 
@@ -44,45 +48,46 @@ public class Enemy : Character
 
     public bool notAttacking = true;
     // Update is called once per frame
+
     public override void Update()
     {
-        base.Update();
-
-        agent.SetDestination(target.position);
-        FaceTarget();
-
-        Vector2 targetXY = new(target.position.x, target.position.y);
-        Vector2 agentXY = new(transform.position.x, transform.position.y);
-
-        
-        if (minAttackDistance > Vector2.Distance(targetXY, agentXY) && notAttacking)
+        if (!dead)
         {
-            notAttacking = false;
-            animator.SetTrigger("Attack");
-            StartCoroutine(attackOnce());
+            base.Update();
 
+            agent.SetDestination(target.position);
+            FaceTarget();
+
+            Vector2 targetXY = new(target.position.x, target.position.y);
+            Vector2 agentXY = new(transform.position.x, transform.position.y);
+
+
+            if (minAttackDistance > Vector2.Distance(targetXY, agentXY) && notAttacking)
+            {
+                notAttacking = false;
+                animator.SetTrigger(ATTACK_ANIMATION);
+                StartCoroutine(Attack());
+            }
         }
 
     }
 
-    IEnumerator attackOnce()
+
+    IEnumerator Attack()
     {
-        yield return new WaitForSeconds(1.2f);
-        Attack();
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(attackDelay);
+        Collider2D[] hitten = Physics2D.OverlapCircleAll(attackPoint.position, attackHitBox, playerLayer);
+        foreach (Collider2D collider in hitten)
+        {
+            collider.GetComponent<Player>().takeDamage(damage);
+            Debug.Log("Hit!");
+        }
+        yield return new WaitForSeconds(attackWait);
         notAttacking = true;
     }
 
 
-    public void Attack()
-    {
-        Collider2D[] hitten = Physics2D.OverlapCircleAll(attackPoint.position, attackHitBox, playerLayer);
-        foreach (Collider2D collider in hitten)
-        {
-            collider.GetComponent<Player>().health -= damage;
-            Debug.Log(collider.GetComponent<Player>().health);
-        }
-    }
+
 
     private void OnDrawGizmosSelected()
     {
@@ -99,7 +104,7 @@ public class Enemy : Character
 
         if (vel != Vector3.zero)
         {
-            animator.SetBool("Walk", true);
+            animator.SetBool(WALK_ANIMATON, true);
             Quaternion toRotation = Quaternion.LookRotation(Vector3.forward,vel);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
 

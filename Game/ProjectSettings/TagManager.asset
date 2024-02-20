@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Sound
   layers:
   - Default
   - TransparentFX
@@ -40,4 +41,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Dead
+    uniqueID: 2473587331
+    locked: 0
+  - name: Player
+    uniqueID: 158271669
+    locked: 0
+  - name: Enemy
+    uniqueID: 1125346873
     locked: 0

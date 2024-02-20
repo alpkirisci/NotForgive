@@ -5,20 +5,23 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
-    public int health;
-    public int maxHealth;
-    public int damage;
-    public string Name;
-    public float speed;
+    protected int health;
+    protected int maxHealth;
+    protected int damage;
+    protected string Name;
+    protected float speed;
     public bool dead = false;
 
-    public Rigidbody2D rb;
-    public Animator animator;
+    protected Rigidbody2D rb;
+    protected Collider2D[] colliders;
+    protected Animator animator;
 
     public string WALK_ANIMATON = "Walk";
     public string ATTACK_ANIMATION = "Attack";
+    public string DEAD_ANIMATION = "Dead";
 
-    public HealtBarScript healthBar;
+
+    public HealtBarScript healthBar; // needs to be addded manually since its a child's component
 
 
     public Character() { }
@@ -28,7 +31,6 @@ public class Character : MonoBehaviour
         this.maxHealth = maxHealth;
         this.damage = damage;
         this.Name = name;
-        healthBar = new HealtBarScript(maxHealth);
     }
 
     //
@@ -36,8 +38,7 @@ public class Character : MonoBehaviour
     {
         this.rb = GetComponent<Rigidbody2D>();
         this.animator = GetComponent<Animator>();
-        //spriteRenderer = GetComponent<SpriteRenderer>();
-        this.health = maxHealth;
+        this.colliders = GetComponents<Collider2D>();
     }
 
 
@@ -54,9 +55,21 @@ public class Character : MonoBehaviour
         if (health <= 0)
         {
             dead = true;
+            animator.SetBool(DEAD_ANIMATION, dead);
+            foreach (Collider2D collider in colliders) { collider.enabled = false; }
         }
         else
             healthBar.setHealth(health);
         
     }
+
+
+    public void takeDamage(int damage)
+    {
+        health -= damage;
+        healthBar.setHealth(health);
+
+    }
+
+
 }

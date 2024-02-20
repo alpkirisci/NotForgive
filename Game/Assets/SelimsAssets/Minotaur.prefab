@@ -338,7 +338,7 @@ Transform:
   m_GameObject: {fileID: 6746482060590592369}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.05, y: 0.13, z: 0}
+  m_LocalPosition: {x: -0.05, y: -0.58, z: 0}
   m_LocalScale: {x: 0.99999994, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -385,12 +385,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1423493305, guid: 7adb10502318c6546a9ef1adfa7b0f30, type: 3}
+  m_Sprite: {fileID: 7227238613661137373, guid: 6cce4360d5c75274db4272108e1c2ecf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.2549019, y: 0.82}
+  m_Size: {x: 1.2, y: 0.78}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -421,7 +421,7 @@ Transform:
   m_GameObject: {fileID: 8292909989049207349}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.03, y: 0.18, z: -0.009829309}
+  m_LocalPosition: {x: -0.02, y: 0.34, z: -0.009829309}
   m_LocalScale: {x: 0.125, y: 0.125, z: 0.125}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -437,7 +437,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5713662610573099350}
   - component: {fileID: 4853846841103285911}
-  - component: {fileID: 3154318745268798213}
   - component: {fileID: 6862653299397131744}
   - component: {fileID: 675532756981553986}
   - component: {fileID: 1375489216416842553}
@@ -484,6 +483,7 @@ MonoBehaviour:
   damage: 0
   Name: 
   speed: 0
+  dead: 0
   rb: {fileID: 0}
   animator: {fileID: 0}
   WALK_ANIMATON: Walk
@@ -497,40 +497,14 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 128
-  attackHitBox: 3.24
+  attackHitBox: 3.85
+  attackDelay: 0
+  attackWait: 0
   notAttacking: 1
---- !u!114 &3154318745268798213
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8363916640715726805}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5aa0cd11f28138440903243eb40e5816, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 0
-  maxHealth: 0
-  damage: 0
-  Name: 
-  speed: 0
-  rb: {fileID: 0}
-  animator: {fileID: 0}
-  WALK_ANIMATON: Walk
-  ATTACK_ANIMATION: Attack
-  healthBar: {fileID: 2498725631746338882}
-  target: {fileID: 0}
-  rotationSpeed: 180
-  minAttackDistance: 5
-  attackPoint: {fileID: 6794385008866840293}
-  player: {fileID: 0}
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 128
-  attackHitBox: 3.34
-  notAttacking: 1
+  _health: 550
+  _damage: 33
+  _attackDelay: 1.2
+  _attackWait: 2
 --- !u!50 &6862653299397131744
 Rigidbody2D:
   serializedVersion: 4
